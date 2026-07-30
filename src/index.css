@@ -1,0 +1,168 @@
+@import "tailwindcss";
+
+@theme {
+  --color-pz-green: #1B5E20;
+  --color-pz-green-light: #E8F5E9;
+  --color-pz-green-mid: #2E7D32;
+  --color-graphite: #1A1A1A;
+  --color-graphite-600: #333333;
+  --color-graphite-500: #555555;
+  --color-graphite-400: #777777;
+  --color-graphite-300: #999999;
+  --color-graphite-200: #BBBBBB;
+  --color-graphite-100: #E0E0E0;
+  --color-graphite-50: #F0F0F0;
+  --color-metal-dark: #2A2A2A;
+  --color-bg-white: #FFFFFF;
+  --color-bg-offwhite: #FAFAFA;
+  --color-bg-dark: #141414;
+  --color-yellow-accent: #FFC107;
+  --font-heading: 'Oswald', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  background-color: var(--color-bg-white);
+  color: var(--color-graphite);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.heading-display {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  line-height: 1.05;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  border-radius: 100px;
+  background-color: var(--color-pz-green-light);
+  color: var(--color-pz-green);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.card-elevated {
+  background: var(--color-bg-white);
+  border: 1px solid var(--color-graphite-100);
+  border-radius: 16px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.03);
+  transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.card-elevated:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08), 0 12px 40px rgba(0,0,0,0.04);
+  transform: translateY(-2px);
+  border-color: var(--color-graphite-200);
+}
+
+.card-dark {
+  background: var(--color-bg-dark);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 16px;
+  color: #ffffff;
+  transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.card-dark:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  transform: translateY(-2px);
+  border-color: rgba(255,255,255,0.12);
+}
+
+.icon-box {
+  display: flex; align-items: center; justify-content: center;
+  width: 48px; height: 48px; border-radius: 12px;
+  background-color: var(--color-pz-green-light);
+  color: var(--color-pz-green); flex-shrink: 0;
+}
+.icon-box-dark {
+  display: flex; align-items: center; justify-content: center;
+  width: 48px; height: 48px; border-radius: 12px;
+  background-color: var(--color-pz-green);
+  color: #ffffff; flex-shrink: 0;
+}
+
+.metal-divider {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #c0c0c0 30%, #888888 50%, #c0c0c0 70%, transparent);
+  opacity: 0.4;
+}
+
+.brushed-metal-bg {
+  background: linear-gradient(135deg, #e8e8e8 0%, #d4d4d4 20%, #e0e0e0 40%, #c8c8c8 60%, #d8d8d8 80%, #e4e4e4 100%);
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--color-bg-offwhite); }
+::-webkit-scrollbar-thumb { background: var(--color-graphite-200); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-graphite-300); }
+
+@keyframes pulse-green {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4); }
+  50% { box-shadow: 0 0 0 12px rgba(37, 211, 102, 0); }
+}
+.animate-pulse-green { animation: pulse-green 2s ease-in-out infinite; }
+
+/* ── Metallic Green Primary Button ── */
+.btn-metallic {
+  position: relative;
+  background: linear-gradient(135deg, #2D7A3E 0%, #1B5E20 40%, #0F3818 100%);
+  color: #ffffff;
+  overflow: hidden;
+  box-shadow:
+    0 2px 8px rgba(27, 77, 36, 0.35),
+    0 1px 2px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  transition: all 0.25s ease-out;
+}
+.btn-metallic::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 60%; height: 50%;
+  background: linear-gradient(135deg, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.04) 60%, transparent 100%);
+  border-radius: inherit;
+  pointer-events: none;
+}
+.btn-metallic:hover {
+  background: linear-gradient(135deg, #35904A 0%, #1B5E20 40%, #0F3818 100%);
+  box-shadow:
+    0 4px 16px rgba(27, 77, 36, 0.4),
+    0 2px 4px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  transform: translateY(-1px) scale(1.02);
+}
+.btn-metallic:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow:
+    0 1px 4px rgba(27, 77, 36, 0.3),
+    inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* ── Metallic Outline Secondary Button ── */
+.btn-outline-metallic {
+  position: relative;
+  border: 2px solid #2D7A3E;
+  color: var(--color-graphite);
+  background: transparent;
+  box-shadow: 0 0 0 0 rgba(45, 122, 62, 0);
+  transition: all 0.25s ease-out;
+}
+.btn-outline-metallic:hover {
+  border-color: #35904A;
+  box-shadow: 0 0 12px rgba(45, 122, 62, 0.15), inset 0 0 8px rgba(45, 122, 62, 0.04);
+  background: rgba(232, 245, 233, 0.3);
+  transform: translateY(-1px) scale(1.02);
+}
+.btn-outline-metallic:active {
+  transform: translateY(0) scale(0.98);
+}
