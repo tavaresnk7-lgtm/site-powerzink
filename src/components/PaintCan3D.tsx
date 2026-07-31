@@ -45,11 +45,7 @@ function Can({ autoRotate }: { autoRotate: boolean }) {
         <cylinderGeometry args={[bodyRadius + 0.04, bodyRadius + 0.04, 0.1, 64]} />
         <meshStandardMaterial color="#c8ccce" metalness={0.95} roughness={0.25} />
       </mesh>
-      {/* Alça — arco simétrico acima da tampa */}
-      <mesh position={[0, bodyHeight / 2 + 0.07, 0]} rotation={[0, Math.PI / 2, 0]}>
-        <torusGeometry args={[bodyRadius - 0.15, 0.03, 16, 128, Math.PI]} />
-        <meshStandardMaterial color="#555555" metalness={0.9} roughness={0.3} />
-      </mesh>
+
     </group>
   );
 }
@@ -69,7 +65,7 @@ export default function PaintCan3D() {
     <div className="relative w-full aspect-[4/3] cursor-grab active:cursor-grabbing">
       <Canvas
         shadows
-        camera={{ position: [0, 0.5, 7.5], fov: 40 }}
+        camera={{ position: [0, 0.5, 6], fov: 40 }}
         onPointerDown={() => setInteracting(true)}
         onPointerUp={() => setInteracting(false)}
         gl={{ antialias: true, alpha: true }}
@@ -86,7 +82,7 @@ export default function PaintCan3D() {
           enablePan={false}
           enableZoom={false}
           minPolarAngle={Math.PI / 2.5}
-          maxPolarAngle={Math.PI / 2}
+          maxPolarAngle={Math.PI / 1.8}
           rotateSpeed={0.6}
         />
       </Canvas>
