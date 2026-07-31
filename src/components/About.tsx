@@ -1,6 +1,7 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Recycle, ShieldCheck, HeadsetIcon, Check } from 'lucide-react';
+import imgAboutExcelencia from '../assets/about-excelencia.jpg';
 
 const bullets = [
   { icon: Recycle, title: 'POWERZINK e VW', text: 'A Powerzink é a marca para multissegmentos idealizada pelo Grupo VW, com mais de duas décadas de atuação.' },
@@ -19,7 +20,7 @@ export default function About() {
           {/* Photo */}
           <motion.div initial={{ opacity: 0, x: -40 }} animate={isInView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.7 }} className="relative">
             <div className="relative rounded-2xl overflow-hidden aspect-[4/3]">
-              <img src="https://images.unsplash.com/photo-1567789884554-0b844b597180?w=800&q=80" alt="Tanques industriais com revestimento anticorrosivo" className="w-full h-full object-cover" loading="lazy" />
+              <img src={imgAboutExcelencia} alt="Pintura industrial com pulverizador" className="w-full h-full object-cover" loading="lazy" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
               <div className="absolute inset-0 bg-pz-green/8 mix-blend-overlay" />
             </div>
