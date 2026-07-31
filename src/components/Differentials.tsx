@@ -23,7 +23,7 @@ export default function Differentials() {
         <motion.div initial={{ opacity: 0, y: 24 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }} className="text-center mb-16">
           <span className="eyebrow">Por que a PowerZink</span>
           <h2 className="heading-display text-3xl sm:text-4xl lg:text-[2.75rem] mt-5 mb-4">
-            NÃO VENDEMOS SÓ TINTA. <span className="text-pz-green">VENDEMOS SOLUÇÃO.</span>
+            MAIS DO QUE VENDER TINTA, <span className="text-pz-green">ENTREGAMOS RESULTADO.</span>
           </h2>
           <p className="text-graphite-400 max-w-2xl mx-auto">
             Diferenciais reais que os grandes fornecedores não oferecem — do diagnóstico ao pós-venda.
