@@ -1,6 +1,7 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Award, Building2, Clock } from 'lucide-react';
+import imgBannerDecadas from '../assets/banner-decadas.jpg';
 
 export default function Partners() {
   const ref = useRef(null);
@@ -38,9 +39,9 @@ export default function Partners() {
         </div>
 
         <motion.div initial={{ opacity: 0, y: 20 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: 0.4 }} className="mt-16 relative rounded-2xl overflow-hidden h-48 lg:h-64 max-w-4xl mx-auto">
-          <img src="https://images.unsplash.com/photo-1518709766631-a6a7f45921c3?w=1200&q=80" alt="Planta petroquímica industrial" className="w-full h-full object-cover" loading="lazy" />
-          <div className="absolute inset-0 bg-gradient-to-r from-graphite/60 via-graphite/30 to-transparent" />
-          <div className="absolute inset-0 bg-pz-green/8 mix-blend-overlay" />
+          <img src={imgBannerDecadas} alt="Planta petroquímica industrial" className="w-full h-full object-cover" loading="lazy" />
+          <div className="absolute inset-0 bg-gradient-to-tr from-black/90 via-black/40 to-transparent" />
+          <div className="absolute inset-0 bg-pz-green/10 mix-blend-overlay" />
           <div className="absolute bottom-0 left-0 p-6 lg:p-8">
             <div className="font-heading font-bold text-2xl lg:text-3xl text-white uppercase tracking-tight">Proteção que dura <span className="text-pz-green-light">décadas</span></div>
             <p className="text-white/70 text-sm mt-1">Soluções testadas nos ambientes mais agressivos do setor industrial</p>
