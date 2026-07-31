@@ -39,7 +39,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-[80px]">
           {/* Logo */}
           <a href="#hero" className="shrink-0 flex items-center">
-            <Logo size="xl" />
+            <Logo size="lg" />
           </a>
 
           {/* Desktop Nav — pushed closer to logo */}
