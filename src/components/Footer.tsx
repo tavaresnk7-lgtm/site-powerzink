@@ -21,7 +21,9 @@ export default function Footer() {
         <div className="grid grid-cols-2 lg:grid-cols-5 gap-10">
           {/* Brand */}
           <div className="col-span-2 lg:col-span-1">
-            <Logo size="xl" className="mb-4" />
+            <div className="flex items-center mb-4">
+              <Logo size="xl" />
+            </div>
             <p className="text-sm text-white/40 max-w-xs leading-relaxed mb-3">
               Soluções industriais completas — tintas, serviço técnico e pós-venda do Grupo VW.
             </p>
