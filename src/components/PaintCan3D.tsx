@@ -69,7 +69,7 @@ export default function PaintCan3D() {
     <div className="relative w-full aspect-[4/3] cursor-grab active:cursor-grabbing">
       <Canvas
         shadows
-        camera={{ position: [0, 0.5, 6], fov: 40 }}
+        camera={{ position: [0, 1.0, 7.5], fov: 42 }}
         onPointerDown={() => setInteracting(true)}
         onPointerUp={() => setInteracting(false)}
         gl={{ antialias: true, alpha: true }}
