@@ -123,6 +123,8 @@ import imgLinePuTripla from '../assets/line-pu-tripla.jpg';
 import imgLineEletrostatica from '../assets/line-eletrostatica.jpg';
 import imgLineEpoxi from '../assets/line-epoxi.jpg';
 import imgLineZinco from '../assets/line-zinco.jpg';
+import imgLinePoliureia from '../assets/line-poliureia.jpg';
+import imgLineAltasTemp from '../assets/line-altas-temp.jpg';
 
 export const productLines: ProductLine[] = [
   { id: 'pu-poliamina', title: 'PU Poliamina', description: 'Poliuretanos de alta resistência química e mecânica para ambientes industriais exigentes.', icon: 'FlaskConical', products: ['pz710'], image: imgLinePuPoliamina, tags: ['Química', 'Alta Resistência', 'Pintura de Máquinas'] },
@@ -130,8 +132,8 @@ export const productLines: ProductLine[] = [
   { id: 'eletrostatica', title: 'Eletrostática', description: 'Tintas para aplicação eletrostática com acabamento premium e eficiência máxima.', icon: 'Zap', products: [], image: imgLineEletrostatica, tags: ['Acabamento', 'Premium'] },
   { id: 'epoxi-auto', title: 'Epóxi Alta Resistência', description: 'Sistemas epóxi autonivelantes para pisos industriais com alta performance e lavabilidade.', icon: 'Warehouse', products: ['pz350', 'pz503'], image: imgLineEpoxi, tags: ['Pisos', 'Autonivelante', 'Industrial'] },
   { id: 'zinco-auto', title: 'Zinco Auto-Mar', description: 'Primers à base de zinco para proteção anticorrosiva em ambientes marítimos e offshore.', icon: 'Ship', products: ['pz025'], image: imgLineZinco, tags: ['Offshore', 'Marítimo', 'Anticorrosivo'] },
-  { id: 'poliureia', title: 'Poliuréia a Frio', description: 'Sistema de poliuréia com aplicação a frio, garantia de 5 anos e durabilidade de 30 anos.', icon: 'Diamond', products: ['pz-titan'], image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&q=80', tags: ['30 Anos', 'Impermeabilização'] },
-  { id: 'altas-temp', title: 'Altas Temperaturas', description: 'Tintas especiais para superfícies expostas a altas temperaturas em caldeiras, fornos e tubulações industriais.', icon: 'Flame', products: ['pz025'], image: 'https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=600&q=80', tags: ['Altas Temperaturas', 'Caldeiras', 'Fornos'] },
+  { id: 'poliureia', title: 'Poliuréia a Frio', description: 'Sistema de poliuréia com aplicação a frio, garantia de 5 anos e durabilidade de 30 anos.', icon: 'Diamond', products: ['pz-titan'], image: imgLinePoliureia, tags: ['30 Anos', 'Impermeabilização'] },
+  { id: 'altas-temp', title: 'Altas Temperaturas', description: 'Tintas especiais para superfícies expostas a altas temperaturas em caldeiras, fornos e tubulações industriais.', icon: 'Flame', products: ['pz025'], image: imgLineAltasTemp, tags: ['Altas Temperaturas', 'Caldeiras', 'Fornos'] },
 ];
 
 export const quizSteps: QuizStep[] = [
