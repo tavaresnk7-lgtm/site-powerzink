@@ -66,10 +66,10 @@ function Loader() {
 export default function PaintCan3D() {
   const [interacting, setInteracting] = useState(false);
   return (
-    <div className="relative w-full aspect-square cursor-grab active:cursor-grabbing">
+    <div className="relative w-full aspect-[4/3] cursor-grab active:cursor-grabbing">
       <Canvas
         shadows
-        camera={{ position: [0, 0.5, 8], fov: 40 }}
+        camera={{ position: [0, 0.5, 7.5], fov: 40 }}
         onPointerDown={() => setInteracting(true)}
         onPointerUp={() => setInteracting(false)}
         gl={{ antialias: true, alpha: true }}
@@ -86,7 +86,7 @@ export default function PaintCan3D() {
           enablePan={false}
           enableZoom={false}
           minPolarAngle={Math.PI / 2.5}
-          maxPolarAngle={Math.PI / 2.1}
+          maxPolarAngle={Math.PI / 2}
           rotateSpeed={0.6}
         />
       </Canvas>
